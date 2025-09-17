@@ -1,29 +1,38 @@
 package ar.edu.unlam.dominio;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-
+ 
 public class Tarifa {
-	
-	private Integer id;
-	private LocalDateTime desde;
-	private LocalDateTime hasta;
+	public static Integer cantidadDeTarifas =0;
+	private  Integer id =0;
+	private LocalDate desde;
+	private LocalDate  hasta;
 	private Double valor;
+	public Tarifa(LocalDate desde, Double valor) {
+
+		this.id = ++cantidadDeTarifas;
+		this.desde=desde;
+		this.hasta=null;
+		this.valor=valor;
+
+	}
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public LocalDateTime getDesde() {
+	public LocalDate getDesde() {
 		return desde;
 	}
-	public void setDesde(LocalDateTime desde) {
+	public void setDesde(LocalDate  desde) {
 		this.desde = desde;
 	}
-	public LocalDateTime getHasta() {
+	public LocalDate  getHasta() {
 		return hasta;
 	}
-	public void setHasta(LocalDateTime hasta) {
+	public void setHasta(LocalDate  hasta) {
 		this.hasta = hasta;
 	}
 	public Double getValor() {
