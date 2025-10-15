@@ -126,9 +126,11 @@ public class ClaseDeTest {
 		Double valorObtenido=ca.getSaldo();
 		
 		assertEquals(valorEsperado, valorObtenido);
-		
+		Cuenta c1  = new CuentaCorriente (cbu,cliente,limiteDescubierto);
 	
-	}
+		
+		
+	 	}
 	
 }
 
